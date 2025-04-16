@@ -15,6 +15,7 @@
       color: #333;
       position: relative;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -25,6 +26,7 @@
       backdrop-filter: blur(4px);
       z-index: -1;
     }
+
     header {
       background-color: rgba(255,255,255,0.9);
       display: flex;
@@ -34,24 +36,29 @@
       border-bottom: 1px solid #e0e0e0;
       flex-wrap: wrap;
     }
+
     header img {
       max-width: 80px;
       height: auto;
     }
+
     .header-text {
       flex: 1;
       margin-left: 20px;
     }
+
     .header-text h1 {
       margin: 0;
       font-size: 28px;
       color: #004578;
     }
+
     .header-text p {
       margin: 5px 0 0;
       font-size: 16px;
       color: #555;
     }
+
     .button {
       background-color: #007bff;
       color: white;
@@ -62,9 +69,11 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
     .button:hover {
       background-color: #0056b3;
     }
+
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -73,46 +82,56 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       border-radius: 10px;
     }
+
     section {
       margin-bottom: 40px;
     }
+
     h2 {
       color: #004578;
       margin-bottom: 10px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     .contact a {
       display: block;
       margin-bottom: 8px;
       color: #007bff;
       text-decoration: none;
     }
+
     .contact a:hover {
       text-decoration: underline;
     }
+
     .utilaje {
       display: none;
       margin-top: 20px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 14px;
       color: #777;
     }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
+
       .header-text {
         margin-left: 0;
       }
     }
   </style>
+
   <script>
     function toggleUtilaje() {
       var utilajeDiv = document.getElementById('utilaje');
@@ -120,6 +139,7 @@
     }
   </script>
 </head>
+
 <body>
 
 <header>
