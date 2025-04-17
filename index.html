@@ -4,168 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PTK Logistic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --blue: #1c294e;
+      --accent: #007bff;
+      --light: #f5f7fa;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;
-      background-size: cover;
+      background: #fff;
       color: #333;
-      position: relative;
     }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(4px);
-      z-index: -1;
-    }
+
     header {
-      background-color: rgba(255, 255, 255, 0.9);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 30px;
-      border-bottom: 1px solid #e0e0e0;
-      flex-wrap: wrap;
-    }
-    header img {
-      max-width: 80px;
-      height: auto;
-    }
-    .header-text {
-      flex: 1;
-      margin-left: 20px;
-    }
-    .header-text h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #004578;
-    }
-    .header-text p {
-      margin: 5px 0 0;
-      font-size: 16px;
-      color: #555;
-    }
-    .button {
-      background-color: #007bff;
+      background-color: var(--blue);
       color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav {
       margin-top: 10px;
     }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: var(--blue);
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
     .button:hover {
       background-color: #0056b3;
     }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      border-radius: 10px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #004578;
-      margin-bottom: 10px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .contact a {
-      display: block;
-      margin-bottom: 8px;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    .utilaje {
-      display: none;
-      margin-top: 20px;
-    }
+
     footer {
+      background-color: var(--light);
       text-align: center;
       padding: 20px;
-      font-size: 14px;
       color: #777;
+      font-size: 14px;
     }
+
     @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .header-text {
-        margin-left: 0;
+      nav a {
+        display: block;
+        margin: 10px 0;
       }
     }
   </style>
-  <script>
-    function toggleUtilaje() {
-      var utilajeDiv = document.getElementById('utilaje');
-      utilajeDiv.style.display = utilajeDiv.style.display === "block" ? "none" : "block";
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <img src="https://i.imgur.com/hxcU2Ag_d.webp" alt="Sigla PTK Logistic" />
-    <div class="header-text">
-      <h1>PTK Logistic</h1>
-      <p>Închiriem utilaje pentru construcții rapid și eficient</p>
-      <button class="button" onclick="toggleUtilaje()">Vezi Utilajele Disponibile</button>
-    </div>
-  </header>
 
-  <main>
-    <section>
-      <h2>Despre PTK Logistic</h2>
-      <p>Suntem o firmă specializată în închirierea de utilaje pentru construcții, oferind soluții rapide și eficiente pentru șantiere de orice dimensiune. Ne mândrim cu seriozitate, promptitudine și utilaje bine întreținute gata de lucru.</p>
-    </section>
+<header>
+  <h1>PTK Logistic</h1>
+  <nav>
+    <a href="#utilaje">Utilaje</a>
+    <a href="#servicii">Servicii</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section>
-      <h2>Servicii oferite</h2>
-      <ul>
-        <li>Închiriere camioane pentru transport materiale</li>
-        <li>Închiriere excavatoare pentru săpături și terasamente</li>
-        <li>Utilaje pregătite pentru șantiere mari și mici</li>
-      </ul>
-    </section>
+<section id="utilaje" class="section">
+  <h2>Utilaje disponibile</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1603702718157-e12cc0378b88?auto=format&fit=crop&w=800&q=80" alt="Excavator">
+    <img src="https://images.unsplash.com/photo-1581091870691-bc918d8f42fb?auto=format&fit=crop&w=800&q=80" alt="Camion">
+    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=800&q=80" alt="Buldoexcavator">
+    <img src="https://images.unsplash.com/photo-1610911629936-898f0adf78dd?auto=format&fit=crop&w=800&q=80" alt="Utilaj santier">
+  </div>
+  <a class="button" href="https://wa.me/40758946159" target="_blank">Solicită ofertă</a>
+</section>
 
-    <section id="utilaje" class="utilaje">
-      <h2>Utilaje disponibile</h2>
-      <ul>
-        <li>Excavator Komatsu PC210</li>
-        <li>Excavator pe șenile Liebherr</li>
-        <li>Camion basculant MAN 8x4</li>
-        <li>Camion cu prelată pentru transport materiale</li>
-      </ul>
-    </section>
+<section id="servicii" class="section">
+  <h2>Serviciile noastre</h2>
+  <ul>
+    <li>Închiriere camioane pentru transport materiale</li>
+    <li>Închiriere excavatoare și buldoexcavatoare</li>
+    <li>Transport utilaje pe platformă</li>
+    <li>Personal calificat la cerere</li>
+  </ul>
+</section>
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <a href="tel:0758946159">Telefon: 0758 946 159</a>
-      <a href="mailto:office@ptklogistic.ro">Email: office@ptklogistic.ro</a>
-      <a href="https://wa.me/40758946159" target="_blank">Scrie-ne pe WhatsApp</a>
-    </section>
-  </main>
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Telefon: <a href="tel:0758946159">0758 946 159</a></p>
+  <p>Email: <a href="mailto:office@ptklogistic.ro">office@ptklogistic.ro</a></p>
+  <p>WhatsApp: <a href="https://wa.me/40758946159" target="_blank">Trimite mesaj</a></p>
+</section>
 
-  <footer>
-    &copy; 2025 PTK Logistic. Toate drepturile rezervate.
-  </footer>
+<footer>
+  &copy; 2025 PTK Logistic. Toate drepturile rezervate.
+</footer>
+
 </body>
 </html>
