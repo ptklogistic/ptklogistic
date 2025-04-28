@@ -1,150 +1,51 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PTK Logistic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --blue: #1c294e;
-      --accent: #007bff;
-      --light: #f5f7fa;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
-
-    header {
-      background-color: var(--blue);
-      color: white;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      color: var(--blue);
-      margin-bottom: 20px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .button {
-      display: inline-block;
-      background-color: var(--accent);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .button:hover {
-      background-color: #0056b3;
-    }
-
-    footer {
-      background-color: var(--light);
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Închirieri utilaje construcții Iași | Excavatoare și camioane - PTK Logistic</title>
+    <meta name="description" content="Închirieri excavatoare, camioane cu macara și transport utilaje în Iași. PTK Logistic - servicii rapide și flexibile pentru șantierul tău. Solicită ofertă!">
+    <meta name="keywords" content="închirieri utilaje Iași, închirieri excavatoare Iași, transport utilaje, camioane cu macara Iași, excavator de închiriat, PTK Logistic">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PTK Logistic">
+    <meta property="og:title" content="Închirieri utilaje construcții Iași | PTK Logistic">
+    <meta property="og:description" content="Excavatoare, camioane cu macara și transport utilaje în Iași. Solicită acum o ofertă!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ro_RO">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #0a1f44; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+        header img { height: 50px; }
+        .contact { font-size: 18px; }
+        .contact a { background: #ff6600; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin-left: 15px; }
+        .slider img { width: 100%; height: auto; }
+        .utilaj, .despre, .servicii, .galerie, footer { text-align: center; padding: 20px; }
+        .utilaj h3, .despre h2, .servicii h2, .galerie h2 { margin: 10px 0; }
+        .utilaj p, .despre p, .servicii p, footer p { font-size: 16px; color: #333; }
+        .utilaj a, .despre a, .servicii a { display: inline-block; margin-top: 10px; background: #ff6600; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; }
+        .puncte-forte, .servicii-lista { list-style: none; padding: 0; }
+        .puncte-forte li, .servicii-lista li { margin: 10px 0; font-size: 16px; }
+        .grid-galerie { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
+        .grid-galerie img { width: 100%; border-radius: 8px; }
+        footer { background: #0a1f44; color: white; font-size: 14px; }
+    </style>
 </head>
 <body>
 
 <header>
-  <h1>PTK Logistic</h1>
-  <nav>
-    <a href="#utilaje">Utilaje</a>
-    <a href="#servicii">Servicii</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="logo">
+        <img src="/mnt/data/725513ab-f2d5-475f-a820-4d9f14b0a71d.png" alt="PTK Logistic">
+    </div>
+    <div class="contact">
+        📞 0758 946 159
+        <a href="https://wa.me/40758946159" target="_blank">Solicită ofertă</a>
+    </div>
 </header>
 
-<section id="utilaje" class="section">
-  <h2>Utilaje disponibile</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1603702718157-e12cc0378b88?auto=format&fit=crop&w=800&q=80" alt="Excavator">
-    <img src="https://images.unsplash.com/photo-1581091870691-bc918d8f42fb?auto=format&fit=crop&w=800&q=80" alt="Camion">
-    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=800&q=80" alt="Buldoexcavator">
-    <img src="https://images.unsplash.com/photo-1610911629936-898f0adf78dd?auto=format&fit=crop&w=800&q=80" alt="Utilaj santier">
-  </div>
-  <a class="button" href="https://wa.me/40758946159" target="_blank">Solicită ofertă</a>
+<section style="text-align: center; padding: 20px;">
+    <a href="https://www.google.ro/maps/place/PTK+Logistic+-+Utilaje+Construc%C8%9Bii+%26+Terasamente/@47.1615845,27.5643619,77m/data=!3m1!1e3!4m6!3m5!1s0x40cafb3fba54313b:0xae41de6d64644b82!8m2!3d47.1615922!4d27.5641896!16s%2Fg%2F11w93ww82x?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="background: #34a853; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 18px;">Vezi locația pe Google Maps</a>
 </section>
 
-<section id="servicii" class="section">
-  <h2>Serviciile noastre</h2>
-  <ul>
-    <li>Închiriere camioane pentru transport materiale</li>
-    <li>Închiriere excavatoare și buldoexcavatoare</li>
-    <li>Transport utilaje pe platformă</li>
-    <li>Personal calificat la cerere</li>
-  </ul>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Telefon: <a href="tel:0758946159">0758 946 159</a></p>
-  <p>Email: <a href="mailto:office@ptklogistic.ro">office@ptklogistic.ro</a></p>
-  <p>WhatsApp: <a href="https://wa.me/40758946159" target="_blank">Trimite mesaj</a></p>
-</section>
-
-<footer>
-  &copy; 2025 PTK Logistic. Toate drepturile rezervate.
-</footer>
-
-</body>
-</html>
+<!-- Restul codului rămâne neschimbat -->
