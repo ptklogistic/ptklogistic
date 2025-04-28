@@ -36,7 +36,7 @@
 
 <header>
     <div class="logo">
-        <img src="/mnt/data/725513ab-f2d5-475f-a820-4d9f14b0a71d.png" alt="PTK Logistic">
+        <img src="/images/logo.png" alt="PTK Logistic">
     </div>
     <div class="contact">
         📞 0758 946 159
@@ -44,8 +44,93 @@
     </div>
 </header>
 
-<section style="text-align: center; padding: 20px;">
-    <a href="https://www.google.ro/maps/place/PTK+Logistic+-+Utilaje+Construc%C8%9Bii+%26+Terasamente/@47.1615845,27.5643619,77m/data=!3m1!1e3!4m6!3m5!1s0x40cafb3fba54313b:0xae41de6d64644b82!8m2!3d47.1615922!4d27.5641896!16s%2Fg%2F11w93ww82x?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="background: #34a853; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 18px;">Vezi locația pe Google Maps</a>
+<section class="slider">
+    <div><img src="/images/slider1.png" alt="Utilaj 1"></div>
+    <div><img src="/images/slider2.png" alt="Utilaj 2"></div>
+    <div><img src="/images/slider3.png" alt="Utilaj 3"></div>
 </section>
 
-<!-- Restul codului rămâne neschimbat -->
+<section class="utilaj">
+    <h3>Takeuchi TB230</h3>
+    <p>Excavator compact, ideal pentru lucrări de săpături în spații restrânse și șantiere rezidențiale.</p>
+
+    <h3>Takeuchi TB175</h3>
+    <p>Excavator de 7,5 tone, perfect pentru lucrări de terasamente, fundații și amenajări exterioare.</p>
+
+    <h3>Sunward SWE 25F</h3>
+    <p>Miniexcavator robust și eficient, potrivit pentru lucrări de utilități, grădini și șantiere de dimensiuni medii.</p>
+
+    <h3>Camion MAN 8.163 cu macara</h3>
+    <p>Camion versatil, echipat cu macara, ideal pentru transport materiale de construcții și echipamente grele.</p>
+
+    <h3>Camion Mercedes Atego</h3>
+    <p>Transport rapid și sigur pentru utilaje și materiale pe șantier.</p>
+</section>
+
+<section class="despre">
+    <h2>Despre PTK Logistic</h2>
+    <p>PTK Logistic este partenerul tău de încredere în domeniul construcțiilor. Oferim servicii de închiriere excavatoare, camioane cu macara și alte utilaje esențiale, adaptate fiecărui proiect. Ne bazăm pe experiență, promptitudine și utilaje moderne pentru a susține fiecare șantier cu echipamente performante.</p>
+    <h3>De ce să ne alegi?</h3>
+    <ul class="puncte-forte">
+        <li>✅ Utilaje întreținute și verificate constant</li>
+        <li>✅ Flexibilitate și livrare rapidă la locație</li>
+        <li>✅ Personal calificat și asistență dedicată</li>
+        <li>✅ Tarife competitive și transparență totală</li>
+    </ul>
+</section>
+
+<section class="servicii">
+    <h2>Servicii oferite</h2>
+    <h3>Închiriere Excavatoare</h3>
+    <ul class="servicii-lista">
+        <li>✅ Săpături fundații</li>
+        <li>✅ Excavări rețele apă, canalizare și gaz</li>
+        <li>✅ Amenajări exterioare și terasamente</li>
+        <li>✅ Lucrări rezidențiale și industriale</li>
+    </ul>
+
+    <h3>Închiriere Camioane cu Macara</h3>
+    <ul class="servicii-lista">
+        <li>✅ Transport materiale de construcții</li>
+        <li>✅ Manipulare utilaje și echipamente grele</li>
+        <li>✅ Transport agregate și pământ</li>
+    </ul>
+
+    <h3>Transport Utilaje</h3>
+    <ul class="servicii-lista">
+        <li>✅ Transport excavatoare</li>
+        <li>✅ Transport miniutilaje</li>
+        <li>✅ Transport materiale grele</li>
+    </ul>
+</section>
+
+<section class="galerie">
+    <h2>Galerie Foto</h2>
+    <div class="grid-galerie">
+        <img src="/images/galerie1.png" alt="Galerie 1">
+        <img src="/images/galerie2.png" alt="Galerie 2">
+        <img src="/images/galerie3.png" alt="Galerie 3">
+        <img src="/images/galerie4.png" alt="Galerie 4">
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 PTK Logistic | Închirieri utilaje pentru construcții</p>
+    <p>📍 Locație: Iași, România</p>
+    <p>Contact rapid: 0758 946 159 | <a href="https://wa.me/40758946159" style="color: #ff6600;">WhatsApp</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            dots: true,
+            arrows: false
+        });
+    });
+</script>
+
+</body>
+</html>
